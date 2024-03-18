@@ -1,0 +1,7 @@
+openai
+flask
+pandas
+joblib
+xgboost
+lightgbm
+scikit-learn==1.2.1
