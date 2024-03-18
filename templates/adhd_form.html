@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHD Symptom Checklist</title>
+    <link rel="stylesheet" type="text/css" href="static/base.css">
+</head>
+
+<body>
+
+    <h1 class="adhd_form">ADHD Symptom Checklist</h1>
+    
+    <form>
+        <div class="details">
+            <!-- Input Form -->
+            <div>
+                <label for="childName">Name of child:</label>
+                <input type="text" id="childName" name="childName" required>
+            </div>
+            <div>
+                <label for="gender">Gender:</label>
+                <input type="text" id="gender" name="gender" required>
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age" required>
+            </div>
+            <div>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div>
+                <label for="completedBy">Completed by:</label>
+                <input type="text" id="completedBy" name="completedBy" required>
+            </div>
+            <div>
+                <label for="telephone">School:</label>
+                <input type="tel" id="telephone" name="telephone" required>
+            </div>
+        </div>
+    </br>
+        <!-- Button to open the form -->
+        <button id="open-btn" class="open-form-button" onclick="toggleForm()">Open ADHD Form</button>
+    </form>
+
+    <form id="adhd_questionnaire" action="{{ url_for("performance")}}" method="post">
+        <div class="question-container">
+            <h4>For each item below, circle the answer that best describes this child.  0=Not at all; 1=Just a Little; 2=Often; 3= Very Often.</h4>
+
+            <!-- Inattention Symptoms -->
+            <div class="inattention">
+                <table>
+                    <tr class="sub-tag">
+                        <td colspan="2">Inattention</td>
+                        <td class="tag">0</td>
+                        <td class="tag">1</td>
+                        <td class="tag">2</td>
+                        <td class="tag">3</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><label for="q1">Fails to give attention to details or makes careless mistakes in schoolwork, work, or during other 
+                                activities (e.g.,overlooks or misses details, work is inaccurate). </label></td>
+                        <td class="tag"><input type="radio" name="q1" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q1" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q1" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q1" value="3" class="multi-choice" required></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><label for="q2">Has difficulty sustaining attention to tasks or play activities (e.g., has difficulty remaining focused 
+                            during lectures; conversations; or lengthy reading)</label></td>
+                        <td class="tag"><input type="radio" name="q2" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q2" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q2" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q2" value="3" class="multi-choice" required></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><label for="q3">Does not seem to listen when spoken to directly (e.g., mind seems elsewhere, even in the absence of 
+                            any obvious distraction). </label></td>
+                        <td class="tag"><input type="radio" name="q3" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q3" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q3" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q3" value="3" class="multi-choice" required></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><label for="q4">Does not follow through on instructions and fails to finish schoolwork, chores, or duties in the 
+                            workplace (e.g., starts tasks but quickly loses focus and is easily sidetracked). </label></td>
+                        <td class="tag"><input type="radio" name="q4" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q4" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q4" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q4" value="3" class="multi-choice" required></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><label for="q5">Has difficulty organizing tasks and activities (e.g., difficulty managing sequential tasks; difficulty 
+                            keeping materials and belongings in order; messy, disorganized with work; has poor time 
+                            management; fails to meet deadlines). </label></td>
+                        <td class="tag"><input type="radio" name="q5" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q5" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q5" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q5" value="3" class="multi-choice" required></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><label for="q6">Avoids, dislikes, or is reluctant to engage in tasks that require sustained mental effort (e.g., 
+                            schoolwork or homework; for older adolescents and adults, preparing reports, completing forms, 
+                            reviewing lengthy papers). </label></td>
+                        <td class="tag"><input type="radio" name="q6" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q6" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q6" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q6" value="3" class="multi-choice" required></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><label for="q7">Loses things necessary for tasks or activities (e.g., school materials, pencils, books, tools, wallets, keys, 
+                            paperwork, eyeglasses, mobile telephones).  </label></td>
+                        <td class="tag"><input type="radio" name="q7" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q7" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q7" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q7" value="3" class="multi-choice" required></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td><label for="q8">Is easily distracted by extraneous stimuli (for older adolescents and adults, may include unrelated 
+                            thoughts). </label></td>
+                        <td class="tag"><input type="radio" name="q8" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q8" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q8" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q8" value="3" class="multi-choice" required></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td><label for="q9">Is forgetful in daily activities (e.g., doing chores, running errands; for older adolescents and adults, 
+                            returning calls, paying bills, keeping appointments). </label></td>
+                        <td class="tag"><input type="radio" name="q9" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q9" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q9" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q9" value="3" class="multi-choice" required></td>
+                    </tr>
+                    <tr class="sub-tag">
+                        <td colspan="6">Hyperactive symptoms</td>
+                        <!-- <td class="tag"></td>
+                        <td class="tag"></td>
+                        <td class="tag"></td>
+                        <td class="tag"></td> -->
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td><label for="q10">Fidgets with or taps hands or feet or squirms in seat. </label></td>
+                        <td class="tag"><input type="radio" name="q10" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q10" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q10" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q10" value="3" class="multi-choice" required></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td><label for="q11">Leaves seat in situations in which it is inappropriate (NOTE: in adolescents or adults may be limited to 
+                            feelings of restlessness).</label></td>
+                        <td class="tag"><input type="radio" name="q11" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q11" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q11" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q11" value="3" class="multi-choice" required></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td><label for="q12">Unable to play or engage in leisure activities quietly</label></td>
+                        <td class="tag"><input type="radio" name="q12" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q12" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q12" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q12" value="3" class="multi-choice" required></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td><label for="q13">Has difficulty playing or engaging in leisure activities quietly</label></td>
+                        <td class="tag"><input type="radio" name="q13" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q13" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q13" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q13" value="3" class="multi-choice" required></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td><label for="q14">Is “on the go” or acts as if “driven by a motor” (e.g., is unable to be or uncomfortable being still for 
+                            extended time in restaurants, meetings; may be experienced by others as being restless or difficult to 
+                            keep up with)</label></td>
+                        <td class="tag"><input type="radio" name="q14" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q14" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q14" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q14" value="3" class="multi-choice" required></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td><label for="q15">Talks excessively</label></td>
+                        <td class="tag"><input type="radio" name="q15" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q15" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q15" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q15" value="3" class="multi-choice" required></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td><label for="q16">Blurts out an answer before question has been completed (e.g., completes people’s sentences; cannot 
+                            wait for turn in conversation). </label></td>
+                        <td class="tag"><input type="radio" name="q16" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q16" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q16" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q16" value="3" class="multi-choice" required></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td><label for="q17">Has difficulty waiting his or her turn (e.g., while waiting in line).</label></td>
+                        <td class="tag"><input type="radio" name="q17" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q17" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q17" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q17" value="3" class="multi-choice" required></td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td><label for="q18">Interrupts or intrudes on others (eg, butts into conversations, games, or activities; may start using 
+                            other people's things without asking or receiving permission; for adolescents and adults may intrude 
+                            into or take over what others are doing) </label></td>
+                        <td class="tag"><input type="radio" name="q18" value="0" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q18" value="1" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q18" value="2" class="multi-choice" required></td>
+                        <td class="tag"><input type="radio" name="q18" value="3" class="multi-choice" required></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr></tr>
+                    <tr>
+                        <td>19</td>
+                        <td><label>Approximately when did you first notice the behaviors:</label></td>
+                        <td colspan="3"><input type="text" name="firstNotice" required></td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td><label>Do these symptoms impair the person's functioning in two or more settings?</label></td>
+                        <td colspan="3">
+                            <select name="impairment" required>
+                                <option>Choose one option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td><label>Where is there impairment? (Select all that apply)</label><br></td>
+                        <td><label class="checkbox-label tag"><input type="checkbox" name="impairmentHome"> Home</label></td>
+                        <td><label class="checkbox-label tag"><input type="checkbox" name="impairmentSchool"> School</label></td>
+                        <td><label class="checkbox-label tag"><input type="checkbox" name="impairmentSocially"> Socially</label></td>
+                    </tr>
+                </table>
+        </div>
+    </br>
+        <!-- Submit Button -->
+        <div><button type="submit" class="submit-button2">Submit</button></div>
+        
+    </form>
+
+    <script>
+        function toggleForm() {
+            const form = document.getElementById('adhd_questionnaire');
+            const btn = document.getElementById('open-btn')
+            form.style.display = 'block';
+            // btn.style.display = 'none';
+        };
+        function redirectToForm() {
+            // You can add authentication logic here
+            // For now, let's redirect to the form
+            window.location.href = 'performance';
+        }
+    </script>
+
+</body>
+
+</html>

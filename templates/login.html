@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - DSM 5 ADHD Symptom Checklist</title>
+    <link rel="stylesheet" type="text/css" href="static/base.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h2>Login - Mental NG</h2>
+
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" class="login-button" onclick="redirectToForm()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function redirectToForm() {
+            // You can add authentication logic here
+            // For now, let's redirect to the form
+            window.location.href = 'diagnosis';
+        }
+    </script>
+
+</body>
+
+</html>

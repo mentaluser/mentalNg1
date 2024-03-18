@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHD Form - Page Two</title>
+    <link rel="stylesheet" type="text/css" href="static/base.css">
+</head>
+
+<body>
+
+    <div class="page-container">
+        <h1 class="school_rt">ADHD Form - Page Two</h1>
+        <p class="school_rt">Please provide additional information:</p>
+
+        <form id="behaviour" action="{{ url_for("results")}}" method="post">
+            <label for="additionalInfo">Additional Information:</label>
+            <textarea id="additionalInfo" name="additionalInfo" class="text-input" rows="6" required></textarea>
+
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
