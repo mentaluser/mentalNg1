@@ -39,3 +39,27 @@ Create and Activate a Virtual Environment (Recommended)
 For Unix/Linux systems:
 python3 -m venv venv
 source venv/bin/activate
+For Windows:
+python -m venv venv
+venv\Scripts\activate
+Install Required Packages
+
+Install all dependencies listed in requirements.txt:
+pip install -r requirements.txt
+API Key Configuration
+
+Insert your OpenAI API key in the application's configuration, preferably as an environment variable or directly within app.py.
+Running the Application
+To start the MentalNg application, execute the following command:
+flask run
+Navigate to http://localhost:5000 in your web browser to access the application and explore its functionalities.
+
+Usage
+Homepage: Begin by visiting the homepage, where you'll find navigation options for diagnosis or to view the application's performance metrics.
+Diagnosis Interface: Complete the form with the required details to receive a mental health condition prediction.
+Prediction Results: View the diagnosis prediction and confidence levels, presented in an easily understandable format.
+Contributing
+Your contributions are welcome! Please refer to CONTRIBUTING.md for guidelines on how to contribute effectively. Let's collaborate to enhance MentalNg.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
