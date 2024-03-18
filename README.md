@@ -15,7 +15,7 @@
 
 ## Overview
 
-MentalNg is a Flask-based web application designed to aid in the diagnosis and understanding of mental health issues, specifically focusing on ADHD. By leveraging advanced machine learning models, such as XGBoost, LightGBM, and logistic regression, the application delivers insightful predictions based on user inputs through an intuitive web interface. Integrated with OpenAI's powerful API, MIS Predictor enhances its predictive capabilities, providing users with a seamless and informative experience.
+MentalNg is a Flask-based web application designed to aid in the diagnosis and understanding of mental health issues, specifically focusing on ADHD. By leveraging advanced machine learning models, such as XGBoost, LightGBM, and logistic regression, the application delivers insightful predictions based on user inputs through an intuitive web interface. Integrated with OpenAI's powerful API, MentalNg enhances its predictive capabilities, providing users with a seamless and informative experience.
 
 ## Features
 
