@@ -12,7 +12,6 @@
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -34,32 +33,39 @@ Ensure you have Python 3.8+ installed on your machine. Then, follow these steps:
    ```bash
    git clone https://your-repository-url.git
    cd your-repository-directory
-Create and Activate a Virtual Environment (Recommended)
+## Create and Activate a Virtual Environment (Recommended)
 
-For Unix/Linux systems:
-python3 -m venv venv
-source venv/bin/activate
-For Windows:
-python -m venv venv
-venv\Scripts\activate
-Install Required Packages
+- **For Unix/Linux systems:**
+  - Run `python3 -m venv venv`
+  - Activate the environment with `source venv/bin/activate`
 
-Install all dependencies listed in requirements.txt:
-pip install -r requirements.txt
-API Key Configuration
+- **For Windows:**
+  - Create the environment with `python -m venv venv`
+  - Activate it using `venv\Scripts\activate`
 
-Insert your OpenAI API key in the application's configuration, preferably as an environment variable or directly within app.py.
-Running the Application
-To start the MentalNg application, execute the following command:
-flask run
-Navigate to http://localhost:5000 in your web browser to access the application and explore its functionalities.
+## Install Required Packages
 
-Usage
-Homepage: Begin by visiting the homepage, where you'll find navigation options for diagnosis or to view the application's performance metrics.
-Diagnosis Interface: Complete the form with the required details to receive a mental health condition prediction.
-Prediction Results: View the diagnosis prediction and confidence levels, presented in an easily understandable format.
-Contributing
-Your contributions are welcome! Please refer to CONTRIBUTING.md for guidelines on how to contribute effectively. Let's collaborate to enhance MentalNg.
+- Install all dependencies listed in `requirements.txt` by running `pip install -r requirements.txt`.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+## API Key Configuration
+
+- Insert your OpenAI API key in the application's configuration. This can be done preferably as an environment variable or directly within `app.py`.
+
+## Running the Application
+
+- To start the MentalNg application, use the command `flask run`.
+- Access the application by navigating to `http://localhost:5000` in your web browser.
+
+## Usage
+
+- **Homepage:** Start on the homepage, where navigation options for diagnosis or viewing the application's performance metrics are available.
+- **Diagnosis Interface:** Fill out the form with the necessary details to receive a mental health condition prediction.
+- **Prediction Results:** Diagnosis predictions and confidence levels are presented in a format that's easy to understand.
+
+## Contributing
+
+- Contributions are welcome! Please see `CONTRIBUTING.md` for guidelines on how to contribute effectively. Collaboration is encouraged to enhance MentalNg.
+
+## License
+
+- This project is licensed under the MIT License. Refer to the `LICENSE` file for more details.
