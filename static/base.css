@@ -1,0 +1,321 @@
+/* body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    } */
+
+body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* height: 100vh; */
+        flex-direction: column;
+    }
+
+.landing-container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 50%;
+    }
+
+h1.index {
+        color: #007bff;
+        margin-bottom: 10px;
+    }
+
+h2.idex {
+        color: #28a745;
+        margin-bottom: 20px;
+    }
+
+p.index {
+        color: #6c757d;
+        margin: 10px 0;
+    }
+
+.mis-logo {
+        /* background-image: url('mental_ng.png'); */
+        width: 200px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+.login-link {
+        display: block;
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+.login-link:hover {
+        text-decoration: underline;
+    }
+
+.page-container {
+        text-align: center;
+    }
+
+.page-result {
+        margin: auto;
+        text-align: center;
+        /* color: #333; */
+        background-color: #f8f9fa;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        width: 30%;
+}
+
+h1.school_rt {
+        color: #007bff;
+    }
+
+p.school_rt {
+        color: #6c757d;
+        margin: 10px 0;
+    }
+
+.text-input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+.result-data {
+    text-overflow: clip;
+
+}
+
+.submit-button {
+        background-color: #28a745;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+.submit-button:hover {
+        background-color: #218838;
+    }
+
+.login-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+h2 {
+        text-align: center;
+        color: #333;
+    }
+
+/* label {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #555;
+    } */
+
+input[type="text"],
+input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+.login-button {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+    }
+
+.login-button:hover {
+        background-color: #2980b9;
+    }
+
+@media (max-width: 600px) {
+        .login-container {
+            margin: 20px;
+        }
+    }
+
+.adhd_form {
+        text-align: center;
+        color: #333;
+    }
+
+.details {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* max-width: 800px; */
+        margin: 0 auto;
+        margin: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #555;
+        width: 100%;
+}
+
+.details input {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+}
+
+.details div {
+    display: flex;
+    flex-direction: column;
+}
+
+.tag {
+    text-align: center;
+}
+
+.sub-tag {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-color: white;
+    margin: 5px;
+}
+
+th, td {
+    padding: 5px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+#adhd_questionnaire {
+        display: none; /* Hidden initially */
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+/* label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #555;
+    } */
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="tel"],
+select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+.question-container {
+        margin-top: 20px;
+    }
+
+.inattention .hyperactive {
+        margin-bottom: 20px;
+    }
+
+.multi-choice {
+        margin-right: 10px;
+    }
+
+.impairment-section {
+        margin-top: 20px;
+    }
+
+.checkbox-label {
+        margin-right: 15px;
+        font-weight: normal;
+    }
+
+#open-btn {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+
+.submit-button2 {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        text-align: center;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+.submit-button2:hover {
+        background-color: #45a049;
+    }
+
+    /* Button to open the form */
+.open-form-button {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+.open-form-button:hover {
+        background-color: #2980b9;
+    }
